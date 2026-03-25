@@ -17,13 +17,13 @@ jobs:
 
     - name: Installeer npm dependencies
       run: npm install
-      working-directory: ./app
+      working-directory: ./
         
     - name: Install dependencies
       run: pip install flask bandit
 
     - name: Run Bandit (Static Code Analysis)
-      run: bandit -r ./app
+      run: bandit -r ./
 
     - name: Scan repository for vulnerabilities
       uses: aquasecurity/trivy-action@master
